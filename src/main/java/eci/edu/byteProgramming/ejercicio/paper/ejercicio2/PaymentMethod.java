@@ -1,8 +1,10 @@
-package eci.edu.byteProgramming.ejercicio.paper.util;
+package eci.edu.byteProgramming.ejercicio.paper.ejercicio2;
+
+
 
 import java.util.Date;
 
-public abstract class PaymentMethod implements ValidatePayment{
+public abstract class PaymentMethod implements ValidatePayment {
     protected double amount;
     protected String transactionID;
     protected String customerID;
@@ -11,15 +13,17 @@ public abstract class PaymentMethod implements ValidatePayment{
     protected PaymentStatus status;
     protected String description;
 
-    public PaymentMethod(double amount, String transactionID, String description) {
+    public PaymentMethod(double amount, String customerId, String description) {
         this.amount = amount;
-        this.customerID = customerID;
+        this.customerID = customerId;
         this.description = description;
         this.currency = "USD";
         this.status = PaymentStatus.PENDING;
         this.timestamp = new Date();
         this.transactionID = generateTransactionId();
     }
+
+
 
     public abstract boolean processPayment();
     public abstract String getPaymentMethod();

@@ -1,24 +1,18 @@
-package eci.edu.byteProgramming.ejercicio.paper.ejercicio1;
+package eci.edu.byteProgramming.ejercicio.paper.ejercicio1.model;
 
-public class Movie {
-    private String title;
-    private String type;
-    private int price;
-    private boolean available;
+public abstract class Movie {
+    protected String title;
+    protected int price;
+    protected boolean available;
 
-    public Movie(String title, String type, int price, boolean available) {
+    public Movie(String title, int price, boolean available) {
         this.title = title;
-        this.type = type;
         this.price = price;
         this.available = available;
     }
 
     public String getTitle() {
         return title;
-    }
-
-    public String getType() {
-        return type;
     }
 
     public int getPrice() {
@@ -33,8 +27,10 @@ public class Movie {
         this.available = available;
     }
 
+    public abstract String getType();
+
     @Override
     public String toString() {
-        return title + " (" + type + ") - $" + price;
+        return title + " (" + getType() + ") - $" + price;
     }
 }

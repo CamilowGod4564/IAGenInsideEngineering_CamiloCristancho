@@ -1,4 +1,5 @@
-package eci.edu.byteProgramming.ejercicio.paper.util;
+package eci.edu.byteProgramming.ejercicio.paper.ejercicio2;
+
 
 import java.util.HashMap;
 import java.util.Map;

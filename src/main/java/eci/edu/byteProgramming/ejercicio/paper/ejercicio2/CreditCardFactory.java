@@ -1,6 +1,7 @@
-package eci.edu.byteProgramming.ejercicio.paper.util;
+package eci.edu.byteProgramming.ejercicio.paper.ejercicio2;
 
-public class CreditCardFactory extends PaymentMethod{
+
+public class CreditCardFactory extends PaymentMethod {
     private String number;
     private String name;
     private String expirationDate;

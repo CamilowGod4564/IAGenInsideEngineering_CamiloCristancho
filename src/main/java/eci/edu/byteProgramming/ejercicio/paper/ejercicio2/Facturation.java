@@ -1,4 +1,4 @@
-package eci.edu.byteProgramming.ejercicio.paper.util;
+package eci.edu.byteProgramming.ejercicio.paper.ejercicio2;
 
 public class Facturation {
     private String companyName = "ECI Payments Corp";

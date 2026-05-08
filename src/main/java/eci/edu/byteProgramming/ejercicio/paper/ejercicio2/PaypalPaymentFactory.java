@@ -1,0 +1,17 @@
+package eci.edu.byteProgramming.ejercicio.paper.ejercicio2;
+
+
+public class PaypalPaymentFactory implements PaymentFactory {
+    private String email;
+    private String authToken;
+
+    public PaypalPaymentFactory(String email, String authToken) {
+        this.email = email;
+        this.authToken = authToken;
+    }
+
+    @Override
+    public PaymentMethod createPaymentMethod(double amount, String customerId, String description) {
+        return new PaypalFactory(amount, customerId, description, email, authToken);
+    }
+}
